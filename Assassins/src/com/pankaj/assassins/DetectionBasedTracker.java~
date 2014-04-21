@@ -1,0 +1,83 @@
+package com.pankaj.assassins;
+
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfRect;
+
+import android.util.Log;
+
+public class DetectionBasedTracker
+{
+    private static final String    TAG                 = "DetectionBasedTracker";
+	///To make faster remove all the include log files and Log statements from the cpp file  
+
+    public DetectionBasedTracker() {
+    	
+    }
+
+    public void initDetectors(String pathVariable) {
+    	nativeInitLoaders(pathVariable);
+    }
+    public int collect(Mat cameraFrameBGR, Mat displayFrameBGR) {
+        	
+       return nativeCollect(cameraFrameBGR.getNativeObjAddr(), displayFrameBGR.getNativeObjAddr());
+    }
+
+    public int train() {
+    	
+       return nativeTrain();
+    }
+
+    public int recognize(Mat cameraFrameBGR, Mat displayFrameBGR) {
+    	
+       return nativeRecognize(cameraFrameBGR.getNativeObjAddr(), displayFrameBGR.getNativeObjAddr());
+    }
+
+    public void reset() {
+    	nativeReset();
+    }
+    
+    private static native void nativeInitLoaders(String pathVariable);
+    private static native int nativeCollect(long inputImage, long outputimage);
+    private static native int nativeTrain();
+    private static native int nativeRecognize(long inputImage, long outputimage);
+	
+    private static native void nativeReset();
+     
+/*	
+    public DetectionBasedTracker(String cascadeName, int minFaceSize) {
+        mNativeObj = nativeCreateObject(cascadeName, minFaceSize);
+    }
+
+    public void start() {
+        nativeStart(mNativeObj);
+        //initwebcam
+        //loadcascadefiles
+    }
+
+    public void stop() {
+        nativeStop(mNativeObj);
+    }
+
+    public void setMinFaceSize(int size) {
+        nativeSetFaceSize(mNativeObj, size);
+    }
+
+    public void detect(Mat imageGray, MatOfRect faces) {
+        nativeDetect(mNativeObj, imageGray.getNativeObjAddr(), faces.getNativeObjAddr());
+    }
+
+    public void release() {
+        nativeDestroyObject(mNativeObj);
+        mNativeObj = 0;
+    }
+
+    private long mNativeObj = 0;
+
+    private static native long nativeCreateObject(String cascadeName, int minFaceSize);
+    private static native void nativeDestroyObject(long thiz);
+    private static native void nativeStart(long thiz);
+    private static native void nativeStop(long thiz);
+    private static native void nativeSetFaceSize(long thiz, int size);
+    private static native void nativeDetect(long thiz, long inputImage, long faces);
+*/
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">Assassins</string>
+    <string name="action_settings">Settings</string>
+    <string name="playButton">  PLAY  </string>
+    <string name="exitButton">EXIT</string>
+    <string name="mainPhoto">ASSASSINS</string>
+    <string name="capture">CAPTURE</string>
+    <string name="recapture">RECAPTURE</string>
+    <string name="next">NEXT</string>
+    <string name="currentTarget">CURRENT TARGET</string>
+    <string name="beginHunt">BEGIN HUNT</string>
+    <string name="name">NAME :</string>
+    <string name="target">TARGET ASSIGNED</string>
+    <string name="blankPortrait">BLANK</string>
+    <string name="rotateLeftButton">ROTATE LEFT</string>
+    <string name="rotateRightButton">ROTATE RIGHT</string>
+    <string name="delete">DELETE</string>
+    <string name="buttonRegister">REGISTER</string>
+    <string name="nameLabel">NAME</string>
+    <string name="phoneLabel">PHONE</string>
+    <string name="emailLabel">EMAIL</string>
+    <string name="collectButton">COLLECT  PORTRAIT</string>
+    <string name="destinationFolder">THIS IS THE FOLDER WHERE YOUR MUGSHOT IS STORED</string>
+    <string name="endApp">CLOSE</string>
+    <string name="targetFiles">ENTER THE ABSOLUTE PATH TO THE TARGET\'S FILES</string>
+    <string name="loadTarget">LOAD TARGET</string>
+    <string name="pankajChandSignature">Pankaj Chand\'s Trophy</string>
+    <string name="score">SCORE</string>
+    <string name="endOfGame">THIS GAME HAS ENDED</string>
+    <string name="playAgain">PLAY AGAIN</string>
+    <string name="retainScore">TO RETAIN YOUR SCORE</string>
+    <string name="game">GAME</string>
+    <string name="playerFiles">ENTER THE FOLDER IN WHICH THE PLAYERS\' FILES ARE KEPT</string>
+    <string name="distributeGameFiles">DISTRIBUTE GAME FILES</string>
+    <string name="mainPage">BACK TO MAIN PAGE</string>
+    <string name="shuffle">SHUFFLE</string>
+</resources>
